@@ -12,6 +12,7 @@ class Window(QtWidgets.QMainWindow):
         super(Window, self).__init__()
         uic.loadUi('form.ui', self) # Load the .ui file
         self.show() # Show the GUI
+        print('test')
 
         dropdown = self.findChild(QtWidgets.QComboBox, "games_dropdown")
         dropdown.addItem("Witcher 3")

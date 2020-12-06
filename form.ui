@@ -80,14 +80,20 @@
     <string>Search</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="game_list">
+  <widget class="QListWidget" name="game_list">
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>250</y>
+     <y>260</y>
      <width>601</width>
-     <height>311</height>
+     <height>301</height>
     </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>30</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
    </property>
   </widget>
  </widget>

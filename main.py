@@ -2,11 +2,12 @@
 
 import sys
 
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, QtGui, uic
 from PyQt5.QtWidgets import QComboBox
 from PyQt5.QtCore import QFile
 
 from scraper import *
+import webbrowser
 
 
 class Window(QtWidgets.QMainWindow):
@@ -23,9 +24,9 @@ class Window(QtWidgets.QMainWindow):
 
         self.searchbox = self.findChild(QtWidgets.QLineEdit, "searchbox")
         self.searchbutton = self.findChild(QtWidgets.QPushButton, "searchbutton")
-        self.game_list = self.findChild(QtWidgets.QTextEdit, "game_list")
-        self.game_list.setReadOnly(True)
+        self.book_list = self.findChild(QtWidgets.QListWidget, "game_list")
 
+        self.book_list.clicked.connect(self.book_clicked)
         self.searchbutton.clicked.connect(self.searchButtonEvent)
 
     def searchButtonEvent(self):
@@ -33,17 +34,18 @@ class Window(QtWidgets.QMainWindow):
         text = self.searchbox.displayText()
 
         if text:
-            print(text)
             self.searchbox.clear()
+            self.book_list.addItem(text)
+ 
+            books = getBooks(text)
 
-        books = getBooks(text)
+            for items in books:
+                for i in items:
+                    self.book_list.addItem(i)
 
-        for items in books:
-            for i in items:
-                self.game_list.append(i)
-
-
-
+    def book_clicked(self):
+        item = self.book_list.currentItem()
+        webbrowser.open("https://www.amazon.com/s?k=" + item.text())
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

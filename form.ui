@@ -16,9 +16,9 @@
   <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>50</y>
-     <width>361</width>
+     <x>240</x>
+     <y>30</y>
+     <width>281</width>
      <height>51</height>
     </rect>
    </property>
@@ -31,56 +31,66 @@
     <string>Games to Books!</string>
    </property>
   </widget>
-  <widget class="QLabel" name="game_label">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>200</y>
-     <width>81</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Select Game:</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="book_label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>320</y>
-     <width>81</width>
-     <height>21</height>
+     <x>80</x>
+     <y>250</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>List of books:</string>
+    <string>List of similar books:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="book_list">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
+  <widget class="QLabel" name="book_label_2">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>330</y>
-     <width>321</width>
-     <height>161</height>
+     <x>20</x>
+     <y>170</y>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="readOnly">
-    <bool>true</bool>
+   <property name="text">
+    <string>Enter title of your favorite game:</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="games_dropdown">
+  <widget class="QLineEdit" name="searchbox">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>200</y>
-     <width>73</width>
-     <height>22</height>
+     <x>190</x>
+     <y>170</y>
+     <width>431</width>
+     <height>31</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="searchbutton">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>170</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plaintextedit">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>250</y>
+     <width>521</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string/>
    </property>
   </widget>
  </widget>

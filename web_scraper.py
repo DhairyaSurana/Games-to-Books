@@ -17,7 +17,7 @@ KEYWORDS: Dict[str, List[str]] = {"role-playing": ["fantasy", "science fiction"]
 
 
 def main() -> None:
-    genres: List[str] = to_game_genre("dark souls 3")
+    genres: List[str] = to_game_genre("minecraft")
     book_genres: List[str] = game_genre_to_book_genre(genres)
     books: List[Dict[str, str]] = []
     for item in book_genres:
@@ -50,16 +50,26 @@ def to_game_genre(game: str) -> List[str]:
 def game_genre_to_book_genre(input: List[str]) -> List[str]:
     """Converts a list of game genres to a list of book genres."""
     result: List[str] = []
+    repeat: bool = False
     for string in input:
         string = string.lower()
         substrings: List[str] = string.split()
         for word in substrings:
             if word in KEYWORDS:
                 for element in KEYWORDS[word]:
-                    result.append(element)
+                    for word in result:
+                        if word == element:
+                            repeat = True
+                    if repeat is not True:
+                        result.append(element)
+        repeat = False
         if string in KEYWORDS:
             for element in KEYWORDS[string]:
-                result.append(element)
+                for word in result:
+                    if word == element:
+                        repeat = True
+                if repeat is not True:
+                    result.append(element)
     return result
 
 

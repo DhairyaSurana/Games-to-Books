@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>bookreccomendations</class>
+ <widget class="QWidget" name="bookreccomendations">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>625</width>
+    <height>446</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>bookreccomendations</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>511</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>Please click on one of the books below to learn more about them or buy one</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backbutton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>370</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(68, 117, 255);
+font: bold 18pt &quot;Times New Roman&quot;</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="ListofBooks">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>90</y>
+     <width>221</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background color: rgb(149, 143, 255)</string>
+   </property>
+   <row>
+    <property name="text">
+     <string>Books</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Lord of the Rings</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>Alice's Adventures in Wonderland</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+   </row>
+   <row>
+    <property name="text">
+     <string>The Witcher</string>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+   </row>
+  </widget>
+  <widget class="QPushButton" name="Lord">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>120</y>
+     <width>112</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background color:rgb(255, 255, 174)</string>
+   </property>
+   <property name="text">
+    <string>Buy Book</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Alice">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>150</y>
+     <width>112</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buy Book</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Withcher">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>180</y>
+     <width>112</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buy Book</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

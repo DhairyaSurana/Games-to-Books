@@ -10,7 +10,7 @@ from PyQt5.QtCore import QFile
 class Window(QtWidgets.QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
-        uic.loadUi('Games-to-Books/form.ui', self) # Load the .ui file
+        uic.loadUi('form.ui', self) # Load the .ui file
         self.show() # Show the GUI
 
         dropdown = self.findChild(QtWidgets.QComboBox, "games_dropdown")

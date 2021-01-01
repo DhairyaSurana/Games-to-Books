@@ -17,7 +17,7 @@ KEYWORDS: Dict[str, List[str]] = {"role-playing": ["fantasy", "science fiction"]
 
 
 def main() -> None:
-    genres: List[str] = to_game_genre("battlefield 3")
+    genres: List[str] = to_game_genre("minecraft")
     book_genres: List[str] = game_genre_to_book_genre(genres)
     books: List[Dict[str, str]] = []
     for item in book_genres:
@@ -27,7 +27,7 @@ def main() -> None:
 
 
 def to_game_genre(game: str) -> List[str]:
-    """Takes a game and determines a list of genres which apply to it."""
+    """Takes a game and determines a list of genres which apply to the game."""
     result: List[str] = []
     game.replace(" ", "+")
     URL: str = "https://www.google.com/search?q=" + game + "+game+genre"
@@ -57,16 +57,16 @@ def game_genre_to_book_genre(input: List[str]) -> List[str]:
         for word in substrings:
             if word in KEYWORDS:
                 for element in KEYWORDS[word]:
-                    for a in result:
-                        if a == element:
+                    for word in result:
+                        if word == element:
                             repeat = True
                     if repeat is not True:
                         result.append(element)
         repeat = False
         if string in KEYWORDS:
             for element in KEYWORDS[string]:
-                for a in result:
-                    if a == element:
+                for word in result:
+                    if word == element:
                         repeat = True
                 if repeat is not True:
                     result.append(element)

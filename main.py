@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 
 import sys
+
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QComboBox
 from PyQt5.QtCore import QFile
@@ -11,6 +12,7 @@ class Window(QtWidgets.QMainWindow):
         super(Window, self).__init__()
         uic.loadUi('form.ui', self) # Load the .ui file
         self.show() # Show the GUI
+        print('test')
 
         dropdown = self.findChild(QtWidgets.QComboBox, "games_dropdown")
         dropdown.addItem("Witcher 3")
